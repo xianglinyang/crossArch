@@ -92,9 +92,7 @@ def count_weight(bin1, func1, bin2, func2):
     return [t0, t1, t2, t3], weight
 
 
-
-
-if __name__ == '__main__':
+def main():
     path = "/home/xianglin/Graduation/graduation/testcase/2423496af35d94a87156b063ea5cedffc10a70a1/vmlinux"
     path2 = "/home/xianglin/Graduation/executables/add_O0"
     path3 = "/home/xianglin/Graduation/executables/add_O1"
@@ -109,11 +107,15 @@ if __name__ == '__main__':
     t2 = time.time()
     s = ans / len(weight)  # range : (0,1)
     print("The similarity between two function is {}".format(s))
-    print('time cost for preprocessing func1 {} s'.format(time_used[1]-time_used[0]))
+    print('time cost for preprocessing func1 {} s'.format(time_used[1] - time_used[0]))
     print('time cost for preprocessing func2 {} s'.format(time_used[2] - time_used[1]))
-    print('time cost for count weight {} s'.format(time_used[3]-time_used[2]))
-    print('time cost for km algorithm {} s'.format(t2-t1))
+    print('time cost for count weight {} s'.format(time_used[3] - time_used[2]))
+    print('time cost for km algorithm {} s'.format(t2 - t1))
     print('time cost total {} s'.format(t2 - t0))
+
+
+if __name__ == '__main__':
+    main()
 
 
 
