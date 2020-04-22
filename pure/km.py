@@ -105,7 +105,7 @@ def main():
     t1 = time.time()
     ans, match = km(weight)
     t2 = time.time()
-    s = ans / len(weight)  # range : (0,1)
+    s = ans / min(len(weight), len(weight[0]))  # range : (0,1)
     print("The similarity between two function is {}".format(s))
     print('time cost for preprocessing func1 {} s'.format(time_used[1] - time_used[0]))
     print('time cost for preprocessing func2 {} s'.format(time_used[2] - time_used[1]))
